@@ -10,6 +10,6 @@ import javax.swing.*;
 public class MineButton {
     public JButton bt;
     public boolean isMine = false;
-    public int location = 0;
+    boolean flag = false;
     public int NumofMines = 0;
 }

@@ -8,55 +8,60 @@ import java.util.List;
 
 
 public class JavaMinesweeper {
+    public static int disableBtns = 0;
+
     public static void noMines(MineButton[] btns, int location, int width, int height) {
-        if (!btns[location].isMine && btns[location].NumofMines > 0) {
+        if (!btns[location].isMine && btns[location].NumofMines > 0 && btns[location].bt.isEnabled()) {
             btns[location].bt.setText(Integer.toString(btns[location].NumofMines));
             btns[location].bt.setEnabled(false);
+            disableBtns++;
             return;
         } else if (!btns[location].isMine && btns[location].NumofMines == 0) {
-            System.out.println(" " + 1 + " " + location);
-            btns[location].bt.setEnabled(false);
-            if (0 <= location && location <= (width - 1)) {
-                if (location > 0) {
-                    noMines(btns, location - 1, width, height);
-                    noMines(btns, location + width - 1, width, height);
-                }
-                if (location < width - 1) {
+            if (btns[location].bt.isEnabled()) {
+                btns[location].bt.setEnabled(false);
+                disableBtns++;
+                if (0 <= location && location <= (width - 1)) {
+                    if (location > 0) {
+                        noMines(btns, location - 1, width, height);
+                        noMines(btns, location + width - 1, width, height);
+                    }
+                    if (location < width - 1) {
+                        noMines(btns, location + 1, width, height);
+                        noMines(btns, location + width + 1, width, height);
+                    }
+                    noMines(btns, location + width, width, height);
+                } else if (location % width == 0 && location != 0 && location != width * (height - 1)) {
+                    noMines(btns, location - width, width, height);
+                    noMines(btns, location - width + 1, width, height);
                     noMines(btns, location + 1, width, height);
+                    noMines(btns, location + width, width, height);
+                    noMines(btns, location + width + 1, width, height);
+                } else if ((location + 1) % width == 0 && location != width - 1 && location != width * height - 1) {
+                    noMines(btns, location - width, width, height);
+                    noMines(btns, location - width - 1, width, height);
+                    noMines(btns, location - 1, width, height);
+                    noMines(btns, location + width, width, height);
+                    noMines(btns, location + width - 1, width, height);
+                } else if (width * (height - 1) <= location && location <= width * height - 1) {
+                    if (location > width * (height - 1)) {
+                        noMines(btns, location - 1, width, height);
+                        noMines(btns, location - width - 1, width, height);
+                    }
+                    if (location < width * height - 1) {
+                        noMines(btns, location + 1, width, height);
+                        noMines(btns, location - width + 1, width, height);
+                    }
+                    noMines(btns, location - width, width, height);
+                } else {
+                    noMines(btns, location - width - 1, width, height);
+                    noMines(btns, location - width, width, height);
+                    noMines(btns, location - width + 1, width, height);
+                    noMines(btns, location - 1, width, height);
+                    noMines(btns, location + 1, width, height);
+                    noMines(btns, location + width - 1, width, height);
+                    noMines(btns, location + width, width, height);
                     noMines(btns, location + width + 1, width, height);
                 }
-                noMines(btns, location + width, width, height);
-            } else if (location % width == 0 && location != 0 && location != width * (height - 1)) {
-                noMines(btns, location - width, width, height);
-                noMines(btns, location - width + 1, width, height);
-                noMines(btns, location + 1, width, height);
-                noMines(btns, location + width, width, height);
-                noMines(btns, location + width + 1, width, height);
-            } else if ((location + 1) % width == 0 && location != width - 1 && location != width * height - 1) {
-                noMines(btns, location - width, width, height);
-                noMines(btns, location - width - 1, width, height);
-                noMines(btns, location - 1, width, height);
-                noMines(btns, location + width, width, height);
-                noMines(btns, location + width - 1, width, height);
-            } else if (width * (height - 1) <= location && location <= width * height - 1) {
-                if (location > width * (height - 1)) {
-                    noMines(btns, location - 1, width, height);
-                    noMines(btns, location - width - 1, width, height);
-                }
-                if (location < width * height - 1) {
-                    noMines(btns, location + 1, width, height);
-                    noMines(btns, location - width + 1, width, height);
-                }
-                noMines(btns, location - width, width, height);
-            } else {
-                noMines(btns, location - width - 1, width, height);
-                noMines(btns, location - width, width, height);
-                noMines(btns, location - width + 1, width, height);
-                noMines(btns, location - 1, width, height);
-                noMines(btns, location + 1, width, height);
-                noMines(btns, location + width - 1, width, height);
-                noMines(btns, location + width, width, height);
-                noMines(btns, location + width + 1, width, height);
             }
         }
     }
@@ -94,11 +99,11 @@ public class JavaMinesweeper {
             public void actionPerformed(ActionEvent e) {
                 final int width = Integer.parseInt(widthtxt.getText());
                 final int height = Integer.parseInt(heighttxt.getText());
-                int num = Integer.parseInt(numtxt.getText());
+                final int num = Integer.parseInt(numtxt.getText());
                 Random rd = new Random();
                 final List mines = new ArrayList();
 
-                if (width < 3 || height < 3) {
+                if (width < 0 || height < 0) {
                     System.out.println("Illegal Input!!!");
                 } else {
                     setting.dispose();        //close the setting window
@@ -211,7 +216,7 @@ public class JavaMinesweeper {
                                         btnArr[Integer.parseInt(mines.get(j).toString())].bt.setText("⚙");
                                         btnArr[Integer.parseInt(mines.get(j).toString())].bt.setEnabled(false);
                                     }
-                                    finish.setTitle("You LOST!!");
+                                    finish.setTitle("You LOSE!!");
                                     finish.setVisible(true);
                                 }
                             });
@@ -221,6 +226,11 @@ public class JavaMinesweeper {
                                 public void actionPerformed(ActionEvent e) {
                                     btnArr[looptmp].bt.setText(Integer.toString(btnArr[looptmp].NumofMines));
                                     btnArr[looptmp].bt.setEnabled(false);
+                                    disableBtns++;
+                                    if (disableBtns == width * height - num) {
+                                        finish.setTitle("You WIN");
+                                        finish.setVisible(true);
+                                    }
                                 }
                             });
                         } else if (btnArr[i].NumofMines == 0) {
@@ -228,6 +238,10 @@ public class JavaMinesweeper {
                                 @Override
                                 public void actionPerformed(ActionEvent e) {
                                     noMines(btnArr, looptmp, width, height);
+                                    if (disableBtns == width * height - num) {
+                                        finish.setTitle("You WIN");
+                                        finish.setVisible(true);
+                                    }
                                 }
                             });
                         }
