@@ -135,6 +135,7 @@ public class JavaMinesweeper {
                 if (width < 3 || height < 3 || num < 0 || num > width * height) {
                     illegal.setVisible(true);
                 } else {
+                    disableBtns = 0;
                     setting.dispose();        //close the setting window
 
                     final MineButton[] btnArr = new MineButton[width * height];
