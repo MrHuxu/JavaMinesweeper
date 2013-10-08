@@ -5,7 +5,7 @@
     <ignored path="JavaMinesweeper.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Main.java" changelist="c885c8e5-0772-44e9-8a1f-341a7bb589dc" time="1380720480294" ignored="false" />
-    <file path="/JavaMinesweeper.java" changelist="c885c8e5-0772-44e9-8a1f-341a7bb589dc" time="1381077896471" ignored="false" />
+    <file path="/JavaMinesweeper.java" changelist="c885c8e5-0772-44e9-8a1f-341a7bb589dc" time="1381208750406" ignored="false" />
     <file path="/fragment.java" changelist="c885c8e5-0772-44e9-8a1f-341a7bb589dc" time="1381076892790" ignored="false" />
     <file path="/MineButton.java" changelist="c885c8e5-0772-44e9-8a1f-341a7bb589dc" time="1381076407048" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,9 +76,11 @@
       <file leaf-file-name="JavaMinesweeper.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JavaMinesweeper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="249" column="35" selection-start="13161" selection-end="13161" vertical-scroll-proportion="2.6981132">
+            <state line="11" column="78" selection-start="280" selection-end="280" vertical-scroll-proportion="-6.811321">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6110#6310#0" expanded="true" />
+                <element signature="e#6291#6292#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,7 +145,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -179,19 +180,20 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RunManager" selected="Application.JavaMinesweeper">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -383,6 +385,8 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6110#6310#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -399,6 +403,8 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6110#6310#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -415,6 +421,8 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6110#6310#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -431,6 +439,8 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6110#6310#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -440,6 +450,8 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6110#6310#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -449,6 +461,8 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6110#6310#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -458,6 +472,8 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6110#6310#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -467,6 +483,8 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6110#6310#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -476,6 +494,8 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6110#6310#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -485,6 +505,8 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6110#6310#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -498,9 +520,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaMinesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="249" column="35" selection-start="13161" selection-end="13161" vertical-scroll-proportion="2.6981132">
+        <state line="11" column="78" selection-start="280" selection-end="280" vertical-scroll-proportion="-6.811321">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6110#6310#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
           </folding>
         </state>
       </provider>
